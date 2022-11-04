@@ -1,3 +1,5 @@
+# python.exe -m pip install --upgrade pip
+# pip install python-dotenv
 from dotenv import load_dotenv
 import os
 
@@ -7,6 +9,7 @@ import copy
 from xml.etree import ElementTree
 
 from pathlib import Path
+# pip install haversine
 from haversine import haversine
 from maps import *
 
@@ -19,7 +22,7 @@ data_folder = Path(os.getenv('DATA_FOLDER'))
 CSV_file_root = "2022SEP17_UP"
 #CSV_file_root = "2022SEP17_DOWN"
 
-print(CSV_file_root)
+print(CSV_file_root, data_folder)
 
 Garmin_full = data_folder / (CSV_file_root+"_data.csv")
 output_full = data_folder / (CSV_file_root+"_output.csv")
